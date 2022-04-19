@@ -32,7 +32,7 @@ def register_extensions(app):
 
 
 def create_data(app, db):
-    """ наполняем БД тестовыми пользователями"""
+    """ наполняем БД тестовыми пользователями """
     with app.app_context():
         db.create_all()
 
