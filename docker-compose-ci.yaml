@@ -7,14 +7,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-      migrations:
-        condition: service_completed_successfully
-  migrations:
-    image: iigor93/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
-    depends_on:
-      postgres:
-        condition: service_healthy
-    command: flask db upgrade
   postgres:
     image: postgres:latest
     environment:
