@@ -18,7 +18,6 @@ class UserView(Resource):
         res = UserSchema(many=True).dump(rs)
         return res, 200
 
-    @admin_required
     def post(self):
         data = request.json
         if 'username' in data and 'password' in data and 'role' in data:

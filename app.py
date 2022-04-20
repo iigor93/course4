@@ -45,8 +45,8 @@ def create_data(app, db):
 
         users = [u1, u2, u3]
 
-        for user in users:
-            user_service.create(user)
+        # for user in users:
+            # user_service.create(user)
 
 
 app = create_app(Config())
