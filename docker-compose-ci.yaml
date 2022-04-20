@@ -3,7 +3,7 @@ services:
   api:
     image: iigor93/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
-    - 8080:80
+    - "127.0.0.1:80:80"
     depends_on:
       postgres:
         condition: service_healthy
