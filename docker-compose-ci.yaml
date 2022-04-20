@@ -8,7 +8,7 @@ services:
       postgres:
         condition: service_healthy
     volumes:
-      - ./docker_config.py:/code/config.py
+      - /home/deploy/flask-app/docker_config.py:/code/config.py
 
 
   postgres:
@@ -21,3 +21,5 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    volumes:
+      - /home/deploy/flask-app/data:/var/lib/postgresql

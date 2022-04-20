@@ -4,7 +4,7 @@
 class Config(object):
     """Настройка приложения Flask"""
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///./movies.db'
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgresql_user:enigma42@postgres:5432/lesson19"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JSON_TO_ASCII = False
 
