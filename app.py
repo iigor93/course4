@@ -43,7 +43,7 @@ def create_data(app, db):
         u2 = {"username": "oleg", "password": "qwerty", "role": "user"}
         u3 = {"username": "oleg", "password": "P@ssw0rd", "role": "admin"}
 
-        users = [u1, u2, u3]
+        users = [u1, u2]
 
         # for user in users:
             # user_service.create(user)
