@@ -22,7 +22,6 @@ def create_app(config_object):
 def register_extensions(app):
     """ создаем Api и подключение к БД"""
     db.init_app(app)
-    migrate = Migrate(app, db)
     api = Api(app)
     api.add_namespace(director_ns)
     api.add_namespace(genre_ns)
