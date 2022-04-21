@@ -1,9 +1,7 @@
 from flask import Flask
 from flask_restx import Api
-from flask_migrate import Migrate
 
 from config import Config
-# from docker_config import Config
 from setup_db import db
 from views.directors import director_ns
 from views.genres import genre_ns
@@ -45,8 +43,8 @@ def create_data(app, db):
 
         users = [u1, u2]
 
-        # for user in users:
-            # user_service.create(user)
+        for user in users:
+            user_service.create(user)
 
 
 app = create_app(Config())
