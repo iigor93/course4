@@ -14,8 +14,8 @@ user_ns = Namespace('user')
 @user_ns.route('/')
 class UserView(Resource):
     def get(self):
-        rs = user_service.get_all()
-        res = UserSchema(many=True).dump(rs)
+        rs_ = user_service.get_all()
+        res = UserSchema(many=True).dump(rs_)
         return res, 200
 
     def post(self):
